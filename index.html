@@ -38,7 +38,7 @@
             <div class="nameContainer">
                 <h2 class="title">
                     <span>C</span><span>o</span><span>d</span><span>e</span> 
-                    <span>E</span><span>n</span><span>t</span><span>h</span><span>u</span><span>s</span><span>i</span><span>a</span><span>s</span><span>t.</span>
+                    <span>E</span><span>n</span><span>t</span><span>h</span><span>u</span><span>s</span><span>i</span><span>a</span><span>s</span><span>t</span><span>.</span>
                 </h2>
                 <h2 class="title">
                     <span>F</span><span>r</span><span>o</span><span>n</span><span>t</span><span>-</span><span>E</span><span>n</span><span>d</span>
@@ -53,8 +53,39 @@
                 </div>
             </div>
         </section>
+        <section id="mySkills">
+            <div class="multi-color-bg">
+                <h2 class="card-title">Technical Skills</h2>
+                <div class="titleUnderline"></div>
+                <div class="skills">
+                    <div class="skill-icon"><i class="fab fa-js"></i></div>
+                    <h3 class="skill-title javascrip">JavaScript</h3>
+                </div>
+                <div class="skills">
+                    <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                    <h3 class="skill-title html">HTML5</h3>
+                </div>
+                <div class="skills">
+                    <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                    <h3 class="skill-title css">CSS3</h3>
+                </div>
+                <div class="skills">
+                    <div class="skill-icon"><i class="fab fa-git-square"></i></div>
+                    <h3 class="skill-title git">GIT</h3>
+                </div>
+                <div class="skills">
+                    <div class="skill-icon"><i class="fab fa-github"></i></div>
+                    <h3 class="skill-title github">GitHub</h3>
+                </div>
+                <div class="skills">
+                    <div class="skill-icon"><i class="fab fa-drupal"></i></div>
+                    <h3 class="skill-title drupal">Drupal</h3>
+                </div>
+            </div>
+        </section>
         <section id="workSection">
             <div class="projectsContainer">
+                    <h2 class="card-title">My Most Recent Projects</h2>
                 <div class="project one">
                     <div class="projectAbout">
                             <h3 class="projectTitle">Knight Watches</h3>
@@ -88,24 +119,42 @@
             </div>
         </section>
         <section id="contactSection">
-            <div class="form-container">
-                <form class="contact-form">
-                    <p class="label">Full Name:</p>
-                    <input type="text" name="full-name">
-                    <p class="label">E-mail Address:</p>
-                    <input type="text" name="email">
-                    <p class="label">Subject:</p>
-                    <input type="text" name="subject">
-                    <p class="label">Message:</p>
-                    <textarea type="text" name="message"></textarea>
-                    <input class="submit-button" type="submit" value="Submit" get="#">
-                </form>
-            </div>
-        </section>
-        <footer id="footer">
-            
-        </footer>
+                <h2 class="card-title">Reach Out!</h2>
+                <div class="form-container">
+                        <p id="message"></p>
+                    <form class="contact-form">
+                        <p class="label">Full Name:</p>
+                        <input type="text" name="full-name">
+                        <p class="label">E-mail Address:</p>
+                        <input type="text" name="email">
+                        <p class="label">Subject:</p>
+                        <input type="text" name="subject">
+                        <p class="label">Message:</p>
+                        <textarea type="text" name="message"></textarea>
+                        <button class="submit-button" type="button">Submit</button>
+                    </form>
+
+                </div>
+            </section>
+            <footer class="main-footer">
+                    <ul class="footer-links">
+                        <li><a href="#card-1">Home</a></li>
+                        <li><a href="resume">Resume</a></li>
+                        <li><a href="#card-3">Work</a></li>
+                        <li><a href="#card-4">About</a></li>
+                    </ul>
+                    <ul class="company-icons">
+                        <li><a href="https://github.com/ilyris" target="_blank">
+                            <div class="icon-container"><i class="fab fa-github"></i></div></a></li>
+                        <li><a href="https://codepen.io/dsieren/" target="_blank"><div class="icon-container"><i class="fab fa-codepen"></i></div></a></li>
+                        <li>
+                            <a class="email" href="mailto:dylan.sieren01@gmail.com"><div class="icon-container"><i class="fas fa-envelope"></i></div></a>
+                        </li>
+                    </ul>
+                    <span class="copyright"><p>© 2019 Dylan Sieren</p></span>
+                </footer>
     </div>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
