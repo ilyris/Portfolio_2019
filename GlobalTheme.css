@@ -559,7 +559,27 @@ textarea {
     -o-animation-play-state: running;
     animation-play-state: running;
 }
-
+/* Web Saftey Page */
+#bestPractices {
+    width: 100%;
+    padding: 30px 50px;
+}
+#bestPractices li {
+    color: #00BCD4;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    padding-top: 25px;
+}
+#bestPractices li p {
+    font-size: 1.8rem;
+    color: #fff;
+    line-height: 40px;
+    letter-spacing: 1px;
+}
+.navigationInformation {
+    font-size: 2.6rem;
+    color: #fff;
+}
 /* Key Frames */
 @keyframes fall-from-top {
     0% {

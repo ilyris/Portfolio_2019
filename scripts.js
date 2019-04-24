@@ -1,9 +1,11 @@
 const submitButton = document.querySelector("form .submit-button");
-submitButton.addEventListener("click", checkInputFields, false);
+
 
 window.onscroll = () => {
   toggleScrolledNavigationBackground();
 };
+
+// Toggle navigation bar class / measure the window height
 const toggleScrolledNavigationBackground = () => {
   const mainNav = document.getElementById("menuBarWrapper");
   const mainLinks = document.getElementsByClassName("menuLinkAnchors");
@@ -23,27 +25,29 @@ const toggleScrolledNavigationBackground = () => {
   }
 };
 
-function checkInputFields() {
-  const inputFields = document.querySelectorAll("input");
-  const message = document.getElementById("message");
-  const textArea = document.querySelector('textarea');
+// Validate / exception handle my contact form
+function checkFormFields() {
+    const inputFields = document.querySelectorAll("input");
+    const message = document.getElementById("message");
+    const textArea = document.querySelector('textarea');
+    let validEntries = 0;
 
-  for (let i = 0; i < inputFields.length; i++) {
-    try {
-        console.log("this is input: " +inputFields[i].value);
-        console.log("this is textArea: " +textArea.value);
-      if (inputFields[i].value === "" || textArea.value === "") {
-        throw "Please fill out the full form";
-      } else if(inputFields[i].value > 0 && inputFields[i].value.length > 0 && textArea.value > 0 && textArea.value.length > 0) {
-          throw "Thank you for reaching out to me! I will reply within 24 hours";
+    for (let i = 0; i < inputFields.length; i++) {
+      try {
+        if (inputFields[i].value === "" || textArea.value === "") {
+          throw "Please fill out the full form";
+        } else if(inputFields[i].value && textArea.value) {
+            validEntries++;
+        } if (validEntries === inputFields.length)  {
+            throw "Thank you for reaching out to me! I will reply within 24 hours";
+        }
+      } catch (err) {
+        message.innerText = err;
       }
-    } catch (err) {
-      message.innerText = err;
+      
+      inputFields[i].value = "";
     }
-  }
-  for(let i = 0; i < inputFields.length; i++) {
-    inputFields[i].value = "";
-  }
-  textArea.value = "";
-};
+    textArea.value = "";
+}
 
+submitButton.addEventListener("click", checkFormFields, false);
