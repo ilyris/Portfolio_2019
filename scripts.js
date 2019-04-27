@@ -2,11 +2,9 @@ const submitButton = document.querySelector("form .submit-button");
 const selectBoxOptions = document.querySelectorAll('select option');
 const selectBox = document.querySelector('select');
 
-for(let i = 0; i < selectBoxOptions.length; i++) {
-  selectBoxOptions[i].addEventListener('click', checkOptionValue, false);
-}
-
 submitButton.addEventListener("click", checkFormFields, false);
+getDateButton.addEventListener('click', calculateDate, false);
+
 
 
 window.onscroll = () => {
@@ -39,7 +37,6 @@ function checkFormFields() {
     const message = document.getElementById("message");
     const textArea = document.querySelector('textarea');
     const selectBox = document.querySelector('select');
-
     let validEntries = 0;
 
     for (let i = 0; i < inputFields.length; i++) {
@@ -61,20 +58,6 @@ function checkFormFields() {
     selectBox.value = "";
 }
 // Add and remove select list options to an array
-function checkOptionValue() {
-  const typeOfServiceArray = [];
-  const createSelectedAttribute = document.createAttribute('selected');
+const checkOptionValue = () => { typeOfServiceArray = Array.from(selectBox.selectedOptions).map(element => element.value); }
 
-  for(let i = 0; i < selectBoxOptions.length; i++) {
-    // selectBoxOptions[i].addEventListener('click', function() {
-      if(selectBoxOptions[i].hasAttribute("selected") === false) {
-        this.setAttributeNode(createSelectedAttribute);
-        console.log('I ran this wil now have the selected attribute');
-      }else if(selectBoxOptions[i].hasAttribute('selected') === true) {
-        this.removeAttribute("selected");
-        console.log('I ran this now does not have the selected atribute');
-      }
-    // }, false);
-
-  }
-}
+// Grab the users input for the date and spit out
