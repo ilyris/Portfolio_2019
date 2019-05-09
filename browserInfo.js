@@ -24,21 +24,37 @@ window.onscroll = () => {
   };
   
   // Toggle navigation bar class / measure the window height
-  const toggleScrolledNavigationBackground = () => {
-    const mainNav = document.getElementById("menuBarWrapper");
-    const mainLinks = document.getElementsByClassName("menuLinkAnchors");
-    const logo = document.querySelector("#logoContainer .logo");
-    mainNav.classList.toggle(
-      "scrolled-nav-background",
-      mainNav.scrollTop / screen.height > 0.75 ||
-        document.documentElement.scrollTop / screen.height > 0.75
-    );
-    if (mainNav.classList.contains("scrolled-nav-background")) {
-      logo.style.color = "#fff";
+const toggleScrolledNavigationBackground = () => {
+  // const mainNav = document.getElementById("menuBarWrapper");
+  // const mainLinks = document.getElementsByClassName("menuLinkAnchors");
+  // const logo = document.querySelector("#logoContainer .logo");
+
+  const mainNav = $('#menuBarWrapper');
+  const mainLinks = $('.menuLinkAnchors');
+  const logo = $('#logoContainer .logo a');
+  
+
+  // mainNav.classList.toggle(
+    mainNav.toggleClass("scrolled-nav-background",mainNav.scrollTop / screen.height > 0.75 ||
+      document.documentElement.scrollTop / screen.height > 0.75
+  );
+  // if (mainNav.classList.contains("scrolled-nav-background")) {
+  //   logo.style.color = "#fff";
+  // } else {
+    if (mainNav.hasClass("scrolled-nav-background")) {
+      logo.css("color", "#311B92");
+    //   for (let i = 0; i < mainLinks.length; i++) {
+      //     mainLinks[i].style.color = "#fff";
+    //   }
+    mainLinks.each(function() {
+      $(this).css('color', '#311B92');
+    });
     } else {
-      logo.style.color = "#fff";
-      for (let i = 0; i < mainLinks.length; i++) {
-        mainLinks[i].style.color = "#fff";
-      }
-    }
-  };
+  //   logo.style.color = "#fff";
+        logo.css("color", "#fff");
+        mainLinks.each(function() {
+          $(this).css('color', '#fff');
+        });
+  // }
+  }
+};

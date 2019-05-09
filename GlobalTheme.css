@@ -61,7 +61,7 @@ body {
     padding: 20px 30px;
 }
 .scrolled-nav-background {
-    background-color: #000;
+    background-color: rgb(197, 197, 197);
 }
 
 #logoContainer {
@@ -116,11 +116,13 @@ body {
     letter-spacing: -1px;
     font-size: 15rem;
     color: rgb(255, 255, 255);
-    padding-left: 20px;
     z-index: 1000;
     text-shadow: -5px 5px 15px #0c0c0c;
 }
-
+.name {
+    font-size: 3rem;
+    color: #7E57C2;
+}
 .nameContainer span {
     display: inline-block;
     transition: all 400ms cubic-bezier(.19, .84, 1, 1);
@@ -262,14 +264,17 @@ body {
     margin: 0 auto 100px 0;
     padding-top: 20px;
     color: #fff;
+    margin-left: 250px;
+    width: 80%;
 }
-
 .card-description {
     font-size: 26px;
     color: #fff;
     font-weight: 600;
     margin: 20px 0;
     width: 100%;
+    padding: 40px;
+    line-height: 60px;
 }
 
 /* Work section number One */
@@ -430,11 +435,26 @@ textarea {
     color: #f20505;
     width: 100%;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.4rem;
     text-transform: capitalize;
     font-style: italic;
 }
-
+#fieldMessageWarning {
+    width: 100%;
+    color: #F44336;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+#fieldMessageWarningUl {
+    width: 50%;
+    list-style: none;
+}
+#fieldMessageWarningUl li {
+    padding: 10px 0;
+}
 #footer {
     width: 100%;
     height: 400px;
@@ -620,9 +640,18 @@ textarea {
     padding-bottom: 10px;
 }
 .citeAnchor {
-    color: #311B92;
+    color: #7E57C2;
     font-size: 2rem;
     padding: 5px 10px;
+}
+.citeAnchor:hover {
+    color: #fff;
+}
+
+/* About Me Page */
+.about-me-description-container {
+    width: 80%;
+    margin: 0 auto;
 }
 /* Key Frames */
 @keyframes fall-from-top {

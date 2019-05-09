@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="GlobalTheme.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <title>Dylan Sieren</title>
 </head>
 
@@ -30,7 +31,7 @@
                         <a class="menuLinkAnchors" href="#">Contact</a>
                     </li>
                     <li class="menuLinks">
-                        <a class="menuLinkAnchors" href="#">About</a>
+                        <a class="menuLinkAnchors" href="about.html">About</a>
                     </li>
                     <li class="menuLinks">
                         <a class="menuLinkAnchors" href="webSaftey.html">Web Saftey</a>
@@ -127,13 +128,16 @@
                 <h2 class="card-title">Reach Out!</h2>
                 <div class="form-container">
                         <p id="message"></p>
-                    <form class="contact-form">
+                        <div id="fieldMessageWarning">
+                            <ul id="fieldMessageWarningUl"></ul>
+                        </div>
+                    <form class="contact-form" novalidate>
                         <p class="label">Full Name:</p>
-                        <input type="text" name="full-name">
+                        <input type="text" id="fullName" name="full-name">
                         <p class="label">E-mail Address:</p>
-                        <input type="text" name="email">
+                        <input type="text" id="email" name="email">
                         <p class="label">Subject:</p>
-                        <input type="text" name="subject">
+                        <input type="text" id="subject" name="subject">
                         <p class="label">What kind of serice are you looking for?</p>
                         <select name="type_of_work" multiple>
                             <option value="webapp">Web Application</option>
@@ -166,6 +170,7 @@
                     <span class="copyright"><p>© 2019 Dylan Sieren</p></span>
                 </footer>
     </div>
+
     <script src="scripts.js"></script>
 </body>
 
