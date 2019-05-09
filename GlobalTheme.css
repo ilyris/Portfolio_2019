@@ -794,3 +794,54 @@ textarea {
         transform: translate3d(0, 0, 0);
     }
 }
+/* scroll button */
+#mainSection .scroll-button {
+    width: 100%;
+    height: 75px;
+  }
+  #mainSection .scroll-button:hover {
+    color: #311B92;
+    transition: all 0.2s ease-in-out;
+  }
+  #mainSection .scroll-button {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    text-align: center;
+    width: 30px;
+    margin: 0 auto;
+}
+  
+  #mainSection .scroll-button span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 30px;
+    height: 50px;
+    margin-left: -15px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    box-sizing: border-box;
+  }
+  
+  #mainSection .scroll-button span::before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: "";
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #7E57C2;
+    border-radius: 100%;
+    -webkit-animation: wheelScrolled 2s infinite;
+    animation: wheelScrolled 2s infinite;
+    box-sizing: border-box;
+  }
+  
+  #mainSection .scroll-button span:hover {
+    border: 2px solid #7E57C2;
+    transition: all 0.2s ease-in-out;
+  }
