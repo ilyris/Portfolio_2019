@@ -651,7 +651,7 @@ textarea {
 /* About Me Page */
 .about-me-description-container {
     width: 80%;
-    margin: 0 auto;
+    margin-left: 250px;
 }
 /* Key Frames */
 @keyframes fall-from-top {
