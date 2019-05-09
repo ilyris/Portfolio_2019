@@ -1,10 +1,10 @@
 const submitButton = document.querySelector("form .submit-button");
 const selectBoxOptions = document.querySelectorAll("select option");
 const selectBox = document.querySelector("select");
-const theBody = $('body');
 
-submitButton.addEventListener("click", checkFormFields, false);
-// getDateButton.addEventListener('click', calculateDate, false);
+
+// submitButton.addEventListener("click", checkFormFields, false);
+
 
 window.onscroll = () => {
   toggleScrolledNavigationBackground();
@@ -135,3 +135,11 @@ const checkOptionValue = () => {
     element => element.value
   );
 };
+
+
+
+if (submitButton.addEventListener) {
+  submitButton.addEventListener("click", checkFormFields, false);
+} else if (submitButton.attachEvent) {
+  submitButton.attachEvent("onclick", checkFormFields);
+}
